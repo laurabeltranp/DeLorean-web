@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'BackToFuture';
+  src: url('https://fonts.cdnfonts.com/s/42148/BackToFuture.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #f7f7fa;
+  color: #222;
+}
+.bttf-title {
+  font-family: 'BackToFuture', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #ea6907 !important;
+  text-shadow: 1px 2px 8px #2222;
+}
+.section-title {
+  font-family: 'BackToFuture', Arial, sans-serif;
+  color: #ea6907;
+  font-size: 2.3rem;
+  text-shadow: 1px 2px 6px #2222;
+}
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #ea6907 !important;
+}
+.hero {
+  min-height: 60vh;
+  background: linear-gradient(105deg, #181F31 60%, #F7AA0A 100%);
+  color: #fff;
+  padding-top: 110px;
+  padding-bottom: 80px;
+  background-size: cover;
+  background-position: center;
+}
+.hero-img {
+  max-width: 95%;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #1116;
+}
+.claim-highlight {
+  background: linear-gradient(90deg, #ea6907 0%, #ffb97c 100%);
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 4px 18px #ea690744;
+  font-family: 'BackToFuture', Arial, sans-serif;
+  letter-spacing: .02em;
+  text-shadow: 1px 2px 6px #2222;
+  transition: box-shadow .2s;
+}
+.claim-highlight:hover {
+  box-shadow: 0 6px 32px #ea690755, 0 0 0 2px #ffb97c66;
+}
+
+#presentacion {
+  font-family: 'Georgia', serif;
+}
+.font-georgia {
+  font-family: 'Georgia', serif;
+}
+
+.btn-bttf {
+  background: linear-gradient(90deg, #F7AA0A 0%, #EA4100 100%);
+  border: none;
+  color: #181F31;
+  font-family: 'BackToFuture', Arial, sans-serif;
+  font-size: 1.15rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 22px;
+  box-shadow: 2px 4px 18px #0002;
+  transition: background 0.2s;
+}
+.btn-bttf:hover {
+  background: linear-gradient(90deg, #EA4100 0%, #F7AA0A 100%);
+  color: #fff;
+}
+.bg-bttf-info {
+  background: linear-gradient(120deg, #1e2340 75%, #EA4100 100%);
+}
+.icon-bttf {
+  font-size: 1.3em;
+  margin-right: 8px;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 340px;
+}
+.servicios-alt .service-img {
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 18px #ea690744;
+  transition: transform .3s cubic-bezier(.24,1.31,.56,.97);
+}
+.servicios-alt .service-img:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px #ea690799;
+}
+.servicios-alt .service-text {
+  background: #fff9f3;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 12px #ea690722;
+  border-left: 6px solid #ea6907;
+}
+.font-georgia {
+  font-family: 'Georgia', serif;
+}
+@media (max-width: 991px) {
+  .servicios-alt .row {
+    flex-direction: column !important;
+  }
+  .servicios-alt .service-img {
+    max-height: 220px;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .section-title { font-size: 1.5rem; }
+  .carousel-item img { height: 160px; }
+}
+@media (min-width: 1400px) {
+  .carousel-item img { height: 500px; }
+  .section-title { font-size: 2.8rem; }
+}
+footer {
+  color: #fff;
+  background: #181F31 !important;
+  letter-spacing: 2px;
+}

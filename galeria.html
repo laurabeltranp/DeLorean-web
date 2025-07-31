@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería | DeLorean Madrid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery-card img,
+    .gallery-card video {
+      object-fit: cover;
+      width: 100%;
+      height: 220px;
+      border-radius: 10px 10px 0 0;
+    }
+    @media (max-width: 767px) {
+      .gallery-card img,
+      .gallery-card video { height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand bttf-title" href="index.html#inicio">DeLorean Madrid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-servicios d-flex align-items-center" style="min-height: 35vh;">
+    <div class="container text-center">
+      <h1 class="bttf-title mb-2" style="font-size:2.3rem;">Galería de Últimos Eventos</h1>
+      <p class="lead mb-0">Explora imágenes y videos de nuestros eventos y clientes felices.</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- IMAGEN EJEMPLO -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card gallery-card h-100 shadow">
+            <img src="imagenes/wedding.jpg" alt="Boda Manuel y Ana" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title bttf-title" style="font-size:1.3rem;">Boda Manuel y Ana</h5>
+              <p class="card-text"><small>Madrid, abril 2024</small></p>
+            </div>
+          </div>
+        </div>
+        <!-- VIDEO EJEMPLO -->
+        <div class="col-md-6 col-lg-4">
+  <div class="card gallery-card h-100 shadow">
+    <!-- Mini video tipo GIF (bucle, sin controles, sin sonido, hace de preview) -->
+    <video src="videos/video1.mp4" autoplay loop muted playsinline
+      style="cursor:pointer; width:100%; height:220px; object-fit:cover; border-radius:10px 10px 0 0;"
+      id="miniVideoDelorean" data-bs-toggle="modal" data-bs-target="#modalDelorean"></video>
+    <div class="card-body">
+      <h5 class="card-title bttf-title" style="font-size:1.3rem;">Feria Motor Sevilla</h5>
+      <p class="card-text"><small>Stand promocional, mayo 2024</small></p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Bootstrap para video grande -->
+<div class="modal fade" id="modalDelorean" tabindex="-1" aria-labelledby="modalDeloreanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 position-relative">
+        <button type="button" class="btn-close position-absolute end-0 m-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        <video src="videos/video1.mp4" controls autoplay style="width:100%; border-radius:10px;" id="fullVideoDelorean"></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- MÁS EJEMPLOS (puedes duplicar esto) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card gallery-card h-100 shadow">
+            <img src="imagenes/spot.jpg" alt="Sesión fotos Valencia" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title bttf-title" style="font-size:1.3rem;">Sesión Fotos Publicidad</h5>
+              <p class="card-text"><small>Valencia, junio 2023</small></p>
+            </div>
+          </div>
+        </div>
+        <!-- Ejemplo de solo video local -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card gallery-card h-100 shadow">
+            <video src="videos/spot.mp4" controls poster="imagenes/spot-barcelona.jpg"></video>
+            <div class="card-body">
+              <h5 class="card-title bttf-title" style="font-size:1.3rem;">Spot TV Barcelona</h5>
+              <p class="card-text"><small>Rodaje, enero 2023</small></p>
+            </div>
+          </div>
+        </div>
+        <!-- Agrega más bloques así para cada imagen o video -->
+      </div>
+    </div>
+  </section>
+
+    <footer class="bg-dark text-white pt-4 pb-3 mt-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-3 mb-md-0">
+      <span class="bttf-title" style="font-size:1.1rem;">DeLorean Madrid &copy; 2025</span>
+    </div>
+    <div class="mb-3 mb-md-0">
+      <a href="aviso-legal.html" class="text-white me-3 text-decoration-underline">Aviso legal</a>
+      <a href="privacidad.html" class="text-white me-3 text-decoration-underline">Política de privacidad</a>
+    </div>
+    <div>
+      <a href="https://facebook.com/" target="_blank" class="text-white me-3" aria-label="Facebook">
+        <!-- Facebook SVG -->
+        <svg height="28" width="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692V11.01h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.462.099 2.797.143v3.24h-1.918c-1.504 0-1.797.716-1.797 1.765v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.405 24 24 23.408 24 22.674V1.326C24 .592 23.405 0 22.675 0"></path></svg>
+      </a>
+      <a href="https://instagram.com/" target="_blank" class="text-white" aria-label="Instagram">
+        <!-- Instagram SVG -->
+        <svg height="28" width="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2.163c3.204,0,3.584,0.012,4.85,0.07c1.17,0.056,1.97,0.24,2.43,0.41c0.602,0.221,1.035,0.487,1.49,0.942c0.455,0.455,0.721,0.888,0.942,1.49c0.17,0.46,0.354,1.26,0.41,2.43c0.058,1.266,0.07,1.646,0.07,4.85s-0.012,3.584-0.07,4.85c-0.056,1.17-0.24,1.97-0.41,2.43c-0.221,0.602-0.487,1.035-0.942,1.49c-0.455,0.455-0.888,0.721-1.49,0.942c-0.46,0.17-1.26,0.354-2.43,0.41c-1.266,0.058-1.646,0.07-4.85,0.07s-3.584-0.012-4.85-0.07c-1.17-0.056-1.97-0.24-2.43-0.41c-0.602-0.221-1.035-0.487-1.49-0.942c-0.455-0.455-0.721-0.888-0.942-1.49c-0.17-0.46-0.354-1.26-0.41-2.43c-0.058-1.266-0.07-1.646-0.07-4.85s0.012-3.584,0.07-4.85c0.056-1.17,0.24-1.97,0.41-2.43c0.221-0.602,0.487-1.035,0.942-1.49c0.455-0.455,0.888-0.721,1.49-0.942c0.46-0.17,1.26-0.354,2.43-0.41C8.416,2.175,8.796,2.163,12,2.163 M12,0C8.741,0,8.332,0.013,7.053,0.072C5.775,0.131,4.802,0.338,4.002,0.635C3.193,0.933,2.553,1.326,1.929,1.95C1.326,2.553,0.933,3.193,0.635,4.002C0.338,4.802,0.131,5.775,0.072,7.053C0.013,8.332,0,8.741,0,12c0,3.259,0.013,3.668,0.072,4.947c0.059,1.278,0.266,2.251,0.563,3.051c0.298,0.809,0.691,1.449,1.315,2.073c0.624,0.624,1.264,1.017,2.073,1.315c0.8,0.297,1.773,0.504,3.051,0.563C8.332,23.987,8.741,24,12,24s3.668-0.013,4.947-0.072c1.278-0.059,2.251-0.266,3.051-0.563c0.809-0.298,1.449-0.691,2.073-1.315c0.624-0.624,1.017-1.264,1.315-2.073c0.297-0.8,0.504-1.773,0.563-3.051C23.987,15.668,24,15.259,24,12s-0.013-3.668-0.072-4.947c-0.059-1.278-0.266-2.251-0.563-3.051c-0.298-0.809-0.691-1.449-1.315-2.073c-0.624-0.624-1.264-1.017-2.073-1.315c-0.8-0.297-1.773-0.504-3.051-0.563C15.668,0.013,15.259,0,12,0L12,0z"/><path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162s2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162S15.403,5.838,12,5.838z M12,15.254c-1.797,0-3.254-1.457-3.254-3.254S10.203,8.746,12,8.746s3.254,1.457,3.254,3.254S13.797,15.254,12,15.254z"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS & jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
