@@ -54,73 +54,74 @@
   </section>
 
   <section class="py-5">
-    <div class="container">
-      <div class="row align-items-stretch">
-        <!-- Formulario -->
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="p-4 rounded bg-white shadow">
-            <h2 class="section-title mb-4">Solicita información</h2>
-            <form action="https://formspree.io/f/mnqezdvl" method="POST" id="contactForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="nombre" class="form-label">Nombre y apellidos</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="email" name="_replyto" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="telefono" class="form-label">Teléfono</label>
-                  <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9 ]{9,}">
-                </div>
-                <div class="col-md-6">
-                  <label for="fecha" class="form-label">Fecha del evento</label>
-                  <input type="date" class="form-control" id="fecha" name="fecha">
-                </div>
-                <div class="col-md-6">
-                  <label for="localidad" class="form-label">Localidad</label>
-                  <input type="text" class="form-control" id="localidad" name="localidad">
-                </div>
-                <div class="col-md-6">
-                  <label for="motivo" class="form-label">Motivo</label>
-                  <select class="form-select" id="motivo" name="motivo" required>
-                    <option value="" selected disabled>Selecciona</option>
-                    <option>Boda</option>
-                    <option>Celebración privada</option>
-                    <option>Evento de empresa</option>
-                    <option>Promoción/marketing</option>
-                    <option>Sesión de fotos/rodaje</option>
-                    <option>Otro</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
-                </div>
-                <div class="col-12 mb-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="legal" name="legal" required>
-                    <label class="form-check-label small" for="legal">
-                      He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-bttf w-100">Enviar mensaje</button>
+  <div class="container">
+    <div class="row align-items-stretch">
+      <!-- Formulario -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="p-4 rounded bg-white shadow">
+          <h2 class="section-title mb-4">Solicita información</h2>
+          <form action="https://formspree.io/f/myzppbkz" method="POST" id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre y apellidos</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9 ]{9,}">
+              </div>
+              <div class="col-md-6">
+                <label for="fecha" class="form-label">Fecha del evento</label>
+                <input type="date" class="form-control" id="fecha" name="fecha">
+              </div>
+              <div class="col-md-6">
+                <label for="localidad" class="form-label">Localidad</label>
+                <input type="text" class="form-control" id="localidad" name="localidad">
+              </div>
+              <div class="col-md-6">
+                <label for="motivo" class="form-label">Motivo</label>
+                <select class="form-select" id="motivo" name="motivo" required>
+                  <option value="" selected disabled>Selecciona</option>
+                  <option>Boda</option>
+                  <option>Celebración privada</option>
+                  <option>Evento de empresa</option>
+                  <option>Promoción/marketing</option>
+                  <option>Sesión de fotos/rodaje</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+              </div>
+              <div class="col-12 mb-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="legal" name="legal" required>
+                  <label class="form-check-label small" for="legal">
+                    He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+                  </label>
                 </div>
               </div>
-              <div class="form-text mt-2" id="form-msg" style="display:none;"></div>
-            </form>
-          </div>
-        </div>
-        <!-- Imagen decorativa -->
-        <div class="col-lg-6 d-flex justify-content-center align-items-center">
-          <img src="imagenes/delorean.jpg" class="img-fluid rounded shadow-lg contact-img" alt="Coche evento">
+              <div class="col-12">
+                <button type="submit" class="btn btn-bttf w-100">Enviar mensaje</button>
+              </div>
+            </div>
+            <div class="form-text mt-2" id="form-msg" style="display:none;"></div>
+          </form>
         </div>
       </div>
+      <!-- Imagen decorativa -->
+      <div class="col-lg-6 d-flex justify-content-center align-items-center">
+        <img src="imagenes/delorean.jpg" class="img-fluid rounded shadow-lg contact-img" alt="Coche evento">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer aquí -->
   <footer class="footer-bttf mt-4 pt-5 pb-3">
