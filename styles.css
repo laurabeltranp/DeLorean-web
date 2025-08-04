@@ -1,20 +1,45 @@
 @font-face {
   font-family: 'BackToFuture';
-  src: url('https://fonts.cdnfonts.com/s/42148/BackToFuture.woff') format('woff');
+  src: url('fuentes/Backtothefuture2002-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+/* Solo para los títulos, navbar, claim y footer requeridos */
+.bttf-title {
+  font-family: 'BackToFuture', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #ea6907;
+  text-shadow: 1px 2px 8px #2222;
+}
+
+/* Efecto LOGO estilo Back to the Future opcional para variantes */
+.logo-bttf {
+  font-family: 'BackToFuture', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: normal;
+  background: linear-gradient(180deg, #ff3600 0%, #ffc800 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 2.5px;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 10px #000,
+    0 0 0 #fff,
+    0 2px 14px #000b;
+  line-height: 1.07;
+  display: inline-block;
+  margin-bottom: 0.14em;
 }
 
 /* --------- GENERALES --------- */
 body {
   background: #f7f7fa;
   color: #222;
-}
-.bttf-title {
-  font-family: 'BackToFuture', Arial, sans-serif;
-  letter-spacing: 2px;
-  color: #ea6907 !important;
-  text-shadow: 1px 2px 8px #2222;
 }
 .section-title {
   font-family: 'BackToFuture', Arial, sans-serif;
@@ -91,7 +116,6 @@ body {
   background: #f7f7fa;
 }
 
-/* Card look general */
 .servicios-alt .row {
   background: #fff;
   border-radius: 1.2rem;
