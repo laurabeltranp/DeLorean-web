@@ -21,10 +21,13 @@ body {
 .logo-img {
   height: 54px;
   width: auto;
-  display: block;
   max-width: 320px;
   min-width: 100px;
   object-fit: contain;
+  display: inline-block;         /* <-- Cambia esto */
+  vertical-align: middle;        /* <-- Añade esto */
+  margin: 0;                     /* <-- Quita márgenes */
+  padding: 0;
   transition: filter .18s;
 }
 @media (max-width: 991px) {
