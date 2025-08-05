@@ -11,42 +11,27 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .contact-img {
-      max-width: 100%;
-      object-fit: cover;
-      border-radius: 1.2rem;
-      box-shadow: 0 2px 18px #1114;
-      max-height: 420px;
-    }
-    @media (max-width: 991px) {
-      .contact-img {
-        margin-top: 30px;
-        max-height: 250px;
-      }
-    }
-  </style>
 </head>
 <body>
-     <!-- NAVBAR -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand p-0" href="index.html#inicio">
-          <img src="imagenes/logo.png" alt="DeLorean Madrid Logo" class="logo-img" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand p-0" href="index.html#inicio">
+        <img src="imagenes/logo.png" alt="DeLorean Madrid Logo" class="logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
   <section class="hero-servicios d-flex align-items-center" style="min-height: 30vh;">
     <div class="container text-center">
@@ -56,77 +41,105 @@
   </section>
 
   <section class="py-5">
-  <div class="container">
-    <div class="row align-items-stretch">
-      <!-- Formulario -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <div class="p-4 rounded bg-white shadow">
-          <h2 class="section-title mb-4">Solicita información</h2>
-          <form action="https://formspree.io/f/myzppbkz" method="POST" id="contactForm">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="nombre" class="form-label">Nombre y apellidos</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              <div class="col-md-6">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9 ]{9,}">
-              </div>
-              <div class="col-md-6">
-                <label for="fecha" class="form-label">Fecha del evento</label>
-                <input type="date" class="form-control" id="fecha" name="fecha">
-              </div>
-              <div class="col-md-6">
-                <label for="localidad" class="form-label">Localidad</label>
-                <input type="text" class="form-control" id="localidad" name="localidad">
-              </div>
-              <div class="col-md-6">
-                <label for="motivo" class="form-label">Motivo</label>
-                <select class="form-select" id="motivo" name="motivo" required>
-                  <option value="" selected disabled>Selecciona</option>
-                  <option>Boda</option>
-                  <option>Celebración privada</option>
-                  <option>Evento de empresa</option>
-                  <option>Promoción/marketing</option>
-                  <option>Sesión de fotos/rodaje</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
-              </div>
-              <div class="col-12 mb-2">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="legal" name="legal" required>
-                  <label class="form-check-label small" for="legal">
-                    He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+    <div class="container">
+      <div class="row align-items-stretch">
+        <!-- Formulario EN SU COLUMNA -->
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="form-delorean w-100">
+            <h2 class="section-title mb-4">Solicita información</h2>
+            <form action="https://formspree.io/f/myzppbkz" method="POST" id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">
+                    Nombre y apellidos <span class="required-asterisk">*</span>
                   </label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">
+                    Correo electrónico <span class="required-asterisk">*</span>
+                  </label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label">
+                    Teléfono <span class="required-asterisk">*</span>
+                  </label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9 ]{9,}">
+                </div>
+                <!-- Fechas bonitas -->
+                <div class="col-md-6">
+                  <label for="fecha_inicio" class="form-label">
+                    Fecha de inicio <span class="required-asterisk">*</span>
+                  </label>
+                  <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="fecha_fin" class="form-label">
+                    Fecha de fin <span class="required-asterisk">*</span>
+                  </label>
+                  <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="localidad" class="form-label">
+                    Localidad
+                  </label>
+                  <input type="text" class="form-control" id="localidad" name="localidad">
+                </div>
+                <div class="col-md-6">
+                  <label for="motivo" class="form-label">
+                    Motivo <span class="required-asterisk">*</span>
+                  </label>
+                  <select class="form-select" id="motivo" name="motivo" required>
+                    <option value="" selected disabled>Selecciona</option>
+                    <option>Boda</option>
+                    <option>Celebración privada</option>
+                    <option>Evento de empresa</option>
+                    <option>Promoción/marketing</option>
+                    <option>Sesión de fotos/rodaje</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">
+                    Mensaje <span class="required-asterisk">*</span>
+                  </label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                </div>
+                <div class="col-12 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="legal" name="legal" required>
+                    <label class="form-check-label small" for="legal">
+                      He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+                      <span class="required-asterisk">*</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-bttf w-100">Enviar mensaje</button>
                 </div>
               </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-bttf w-100">Enviar mensaje</button>
-              </div>
+              
+            </form>
+          </div>
+        </div>
+        <!-- Imagen decorativa EN SU COLUMNA -->
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-4 mt-lg-0">
+          <img src="imagenes/delorean.jpg" class="img-fluid rounded shadow-lg contact-img-delorean" alt="Coche evento">
+          <div class="contact-img-desc mt-4 text-center">
+            <h5 class="img-title mb-2" style="font-weight:700;color:#ea6907;letter-spacing:1.2px;">¡Haz tu evento inolvidable!</h5>
+            <div style="color:#333;font-size:1.11em;">
+              Vive la experiencia única de tener un <b>DeLorean original</b> en tu boda, fiesta o rodaje.  
+              ¡Contacta y descubre la magia!
             </div>
-            <div class="form-text mt-2" id="form-msg" style="display:none;"></div>
-          </form>
+          </div>
         </div>
       </div>
-      <!-- Imagen decorativa -->
-      <div class="col-lg-6 d-flex justify-content-center align-items-center">
-        <img src="imagenes/delorean.jpg" class="img-fluid rounded shadow-lg contact-img" alt="Coche evento">
-      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer aquí -->
-  <footer class="footer-bttf mt-4 pt-5 pb-3">
+<footer class="footer-bttf mt-4 pt-5 pb-3">
   <div class="container">
     <div class="row gy-4 align-items-center">
       <div class="col-12 col-md-4 text-center text-md-start">
@@ -143,14 +156,41 @@
           <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2.163c3.204,0,3.584,0.012,4.85,0.07c1.17,0.056,1.97,0.24,2.43,0.41c0.602,0.221,1.035,0.487,1.49,0.942c0.455,0.455,0.721,0.888,0.942,1.49c0.17,0.46,0.354,1.26,0.41,2.43c0.058,1.266,0.07,1.646,0.07,4.85s-0.012,3.584-0.07,4.85c-0.056,1.17-0.24,1.97-0.41,2.43c-0.221,0.602-0.487,1.035-0.942,1.49c-0.455,0.455-0.888,0.721-1.49,0.942c-0.46,0.17-1.26,0.354-2.43,0.41c-1.266,0.058-1.646,0.07-4.85,0.07s-3.584-0.012-4.85-0.07c-1.17-0.056-1.97-0.24-2.43-0.41c-0.602-0.221-1.035-0.487-1.49-0.942c-0.455-0.455-0.721-0.888-0.942-1.49c-0.17-0.46-0.354-1.26-0.41-2.43c-0.058-1.266-0.07-1.646-0.07-4.85s0.012-3.584,0.07-4.85c0.056-1.17,0.24-1.97,0.41-2.43c0.221-0.602,0.487-1.035,0.942-1.49c0.455-0.455,0.888-0.721,1.49-0.942c0.46-0.17,1.26-0.354,2.43-0.41C8.416,2.175,8.796,2.163,12,2.163 M12,0C8.741,0,8.332,0.013,7.053,0.072C5.775,0.131,4.802,0.338,4.002,0.635C3.193,0.933,2.553,1.326,1.929,1.95C1.326,2.553,0.933,3.193,0.635,4.002C0.338,4.802,0.131,5.775,0.072,7.053C0.013,8.332,0,8.741,0,12c0,3.259,0.013,3.668,0.072,4.947c0.059,1.278,0.266,2.251,0.563,3.051c0.298,0.809,0.691,1.449,1.315,2.073c0.624,0.624,1.264,1.017,2.073,1.315c0.8,0.297,1.773,0.504,3.051,0.563C8.332,23.987,8.741,24,12,24s3.668-0.013,4.947-0.072c1.278-0.059,2.251-0.266,3.051-0.563c0.809-0.298,1.449-0.691,2.073-1.315c0.624-0.624,1.017-1.264,1.315-2.073c0.297-0.8,0.504-1.773,0.563-3.051C23.987,15.668,24,15.259,24,12s-0.013-3.668-0.072-4.947c-0.059-1.278-0.266-2.251-0.563-3.051c-0.298-0.809-0.691-1.449-1.315-2.073c-0.624-0.624-1.264-1.017-2.073-1.315c-0.8-0.297-1.773-0.504-3.051-0.563C15.668,0.013,15.259,0,12,0L12,0z"/><path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162s2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162S15.403,5.838,12,5.838z M12,15.254c-1.797,0-3.254-1.457-3.254-3.254S10.203,8.746,12,8.746s3.254,1.457,3.254,3.254S13.797,15.254,12,15.254z"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
         </a>
       </div>
-      <div class="col-12 col-md-4 text-center text-md-end">
-        <a href="aviso-legal.html" class="footer-link mx-2">Aviso legal</a>
-        <a href="privacidad.html" class="footer-link mx-2">Política de privacidad</a>
+      <!-- BLOQUE ENLACES VISIBLES Y CENTRADOS EN MOBILE -->
+      <div class="col-12 col-md-4">
+        <div class="footer-links d-flex justify-content-center justify-content-md-end flex-wrap gap-2">
+          <a href="aviso-legal.html" class="footer-link">Aviso legal</a>
+          <a href="privacidad.html" class="footer-link">Política de privacidad</a>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- Modal de éxito del formulario -->
+<div class="modal fade" id="formSuccessModal" tabindex="-1" aria-labelledby="formSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg border-0" style="border-radius: 22px;">
+      <div class="modal-header border-0" style="background: linear-gradient(90deg,#f7aa0a,#ea4100); border-radius: 22px 22px 0 0;">
+        <h5 class="modal-title" id="formSuccessModalLabel" style="color:#fff;letter-spacing:1.2px;font-size:1.3em;font-weight:700;">
+          ¡Mensaje enviado!
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center py-4">
+        <!-- SVG de check animado y bonito -->
+        <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+          <circle cx="35" cy="35" r="34" stroke="#F7AA0A" stroke-width="3" fill="#fff"/>
+          <path d="M20 38L32 50L50 24" stroke="#EA6907" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="mb-0 mt-3" style="font-size:1.1em;">Hemos recibido tu solicitud. <br> Te responderemos en menos de 24h.</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center" style="border-radius: 0 0 22px 22px;">
+        <button type="button" class="btn btn-bttf px-4" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="main.js"></script>
