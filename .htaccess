@@ -5,16 +5,22 @@ DirectoryIndex index.html
 # --- Reescrituras ---
 RewriteEngine On
 
-# 1 salto: forzar https Y quitar www -> https://deloreanalquiler.com/...
+# 1 salto: forzar https y quitar www -> https://deloreanalquiler.com/...
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.deloreanalquiler\.com$ [NC]
 RewriteRule ^ https://deloreanalquiler.com%{REQUEST_URI} [R=301,L]
 
-# No reescribir si el recurso o el directorio existen
+# Redirigir /index.html a /
+RewriteRule ^index\.html$ / [R=301,L]
+
+# No reescribir si el recurso o el directorio existen (protege img/css/js, etc.)
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# URLs sin .html -> servir el .html si existe 
+# URLs sin .html -> servir el .html si existe (también en subcarpetas)
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# (Opcional) HSTS: solo si el sitio ya funciona 100% en HTTPS y con dominio canónico
+# Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
